@@ -4,13 +4,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+.container-main{
     background-color: rgb(44,48,68);
     text-align: justify;
     font-size: 1.25rem;
 }
 
-body h2{
+.container-main h2{
     text-align: center;
 }
 
@@ -19,14 +19,13 @@ body h2{
     text-align: center;
 }
 .container-nav a{
-    color: black;
     text-decoration: none;
-    font-size: medium;
+    font-size: 1.2rem;
 }
 .container-nav a:hover{
-    color: grey;
+    color: rgb(160, 160, 160);
     text-decoration: none;
-    font-size: large;
+    font-size: 2rem;
 }
 .container-nav a:visited{
     color: black;
@@ -88,9 +87,8 @@ body h2{
 
 .container-habs{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+    justify-content: center;
+    gap: 5rem;
 }
 
 ul {
@@ -99,4 +97,17 @@ ul {
 }
 ul ul {
     margin-left: 1rem;
+}
+
+.container-footer{
+    color: aliceblue;
+    background-color: rgb(74,96,135);
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container-footer img{
+    width: 5rem;
+    height: auto;
 }
