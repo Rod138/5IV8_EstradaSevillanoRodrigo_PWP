@@ -112,3 +112,15 @@ ul ul {
     width: 5rem;
     height: auto;
 }
+
+.container-footer a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.container-footer a:hover{
+    color: gray;
+    font-weight: bold;
+}
+.container-footer a:visited{
+    color: aliceblue;
+}
