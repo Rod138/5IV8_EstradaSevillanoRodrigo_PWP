@@ -11,7 +11,7 @@ header{
 body{
     background-color: #F5F5F5;
     color: #212121;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a{
@@ -62,4 +62,17 @@ td img{
   vertical-align: middle;
   font-size: 20px;
   margin-left: 5px;
+}
+footer{
+    background-color: #3993DD;
+    color: #F5F5F5;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+footer img{
+    width: 4rem;
+}
+.container-main h1{
+    text-align: center;
 }
