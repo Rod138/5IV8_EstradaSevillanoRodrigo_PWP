@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: #1976D2;
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 2.5rem !important;
+    padding: 1rem;
+}
+body{
+    background-color: #F5F5F5;
+    color: #212121;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-main h1{
+    font-size: 3rem;
+    text-align: center;
+}
+a{
+    color: #F5F5F5;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:hover{
+    font-weight: 700;
+    color: #683ECC;
+    text-decoration: underline;
+}
+.container-main{
+    padding: 1.5rem;
+}
+.material-icons{
+  vertical-align: middle;
+  font-size: 3rem !important;
+}
+footer{
+    background-color: #3993DD;
+    color: #F5F5F5;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    padding: 1rem;
+}
+.container-form{
+    background-color: #683ECC;
+    color: #F5F5F5;
+    width: 350px;
+    padding: 1.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 25px;
+}
+
+.container-form label, .container-form input{
+    width: 100%;
+    margin-bottom: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.container-form input[type="submit"], .container-form input[type="reset"]{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: #F5F5F5;
+    color: #683ECC;
+    font-weight: bold;
+}
