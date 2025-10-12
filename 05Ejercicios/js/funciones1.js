@@ -11,18 +11,25 @@ function validarn(e) {
 //Función para calcular el interés y delimitar el número de decimales
 function interes() {
     var valor = document.getElementById("cantidadi").value;
-    var parseo = parseFloat(valor);
-    if (!Number.isNaN(parseo)) {
-        var interes = parseo * 0.085;
-        var total = (interes + parseo).toFixed(2);
-        document.getElementById("saldoi").value = "$" + total;
+    var meses = document.getElementById("meses").value;
+    var cantidad = parseFloat(valor);
+    var numMeses = parseInt(meses);
+    if (Number.isNaN(cantidad) || Number.isNaN(numMeses)) {
+        alert("Debe ingresar números válidos para cantidad y meses");
+        return;
     }
-    else {
-        alert("Debe ingresar un número")
+    var total = cantidad;
+    var i = 0;
+    while (i < numMeses) {
+        total = total * 1.02;
+        i++;
     }
+    total = (total).toFixed(2)
+    document.getElementById("saldoi").value = "$" + total;
 }
 function borrari() {
     document.getElementById("cantidadi").value = "";
+    document.getElementById("meses").value = "";
     document.getElementById("saldoi").value = "";
 }
 
