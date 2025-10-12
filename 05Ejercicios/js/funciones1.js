@@ -1,3 +1,4 @@
+// Ejercicio 1
 function validarn(e){
     var teclado = (document.all)? e.keyCode : e.which;
     if (teclado == 8) return true;
@@ -6,7 +7,6 @@ function validarn(e){
     var codigo = String.fromCharCode(teclado);
     return patron.test(codigo);
 }
-
 //Función para calcular el interés
 //Delimitar el número de decimales
 function interes(){
@@ -20,8 +20,17 @@ function interes(){
     alert(total)
     document.getElementById("saldoi").value = "$ " + total; //Límite a 2 decimales
 }
-
 function borrari(){
     document.getElementById("cantidadi").value = "";
     document.getElementById("saldoi").value = "";
 }
+
+// Ejercicio 2
+
+// Ejercicio 3
+
+// Ejercicio 4
+
+// Ejercicio 5
+
+// Ejercicio 6

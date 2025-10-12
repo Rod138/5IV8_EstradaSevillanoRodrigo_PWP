@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #212121;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #1976D2;
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.container-main {
+    padding: 1rem;
+    text-align: center;
+}
+
+.container-table {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid #000;
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+th {
+    background-color: #1976D2;
+    color: #F5F5F5;
+    font-size: 1.2rem;
+}
+
+tr:hover {
+    background-color: #212121;
+    color: #F5F5F5;
+}
+
+a {
+    color: #3993DD;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+    color: #683ECC;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #3993DD;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+footer a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: larger;
+}
+
+footer a:hover {
+    color: #212121;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+.container{
+    padding: 1rem;
+}
