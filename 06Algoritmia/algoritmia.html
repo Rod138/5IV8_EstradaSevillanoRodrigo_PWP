@@ -7,6 +7,7 @@
     <title>Ejemplo de uso de algoritmia</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="./js/algoritmia.js"></script>
 </head>
 
 <body>
@@ -20,9 +21,10 @@
                 Las palabras pueden estar separadas únicamente por espacios.
             </p>
             <div class="problema-content">
-                <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por un espacio" id="p1-input">
-                <button type="button" class="problema-button" style="margin-top: 1rem;">Invertir palabras</button>
+                <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por un espacio" id="p1-input" onkeypress="validar1(event)">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema1()">Invertir palabras</button>
                 <pre class="problema-output" id="p1-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrar1()">Borrar</button>
             </div>
         </div>
     </div>
@@ -49,23 +51,23 @@
                         <tbody>
                             <tr>
                                 <td>X1</td>
-                                <td><input type="number" class="problema-input" id="p2-x1"></td>
+                                <td><input type="number" class="problema-input" id="p2-x1" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>X2</td>
-                                <td><input type="number" class="problema-input" id="p2-x2"></td>
+                                <td><input type="number" class="problema-input" id="p2-x2" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>X3</td>
-                                <td><input type="number" class="problema-input" id="p2-x3"></td>
+                                <td><input type="number" class="problema-input" id="p2-x3" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>X4</td>
-                                <td><input type="number" class="problema-input" id="p2-x4"></td>
+                                <td><input type="number" class="problema-input" id="p2-x4" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>X5</td>
-                                <td><input type="number" class="problema-input" id="p2-x5"></td>
+                                <td><input type="number" class="problema-input" id="p2-x5" onkeypress="validar2(event)"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,23 +81,23 @@
                         <tbody>
                             <tr>
                                 <td>Y1</td>
-                                <td><input type="number" class="problema-input" id="p2-y1"></td>
+                                <td><input type="number" class="problema-input" id="p2-y1" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>Y2</td>
-                                <td><input type="number" class="problema-input" id="p2-y2"></td>
+                                <td><input type="number" class="problema-input" id="p2-y2" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>Y3</td>
-                                <td><input type="number" class="problema-input" id="p2-y3"></td>
+                                <td><input type="number" class="problema-input" id="p2-y3" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>Y4</td>
-                                <td><input type="number" class="problema-input" id="p2-y4"></td>
+                                <td><input type="number" class="problema-input" id="p2-y4" onkeypress="validar2(event)"></td>
                             </tr>
                             <tr>
                                 <td>Y5</td>
-                                <td><input type="number" class="problema-input" id="p2-y5"></td>
+                                <td><input type="number" class="problema-input" id="p2-y5" onkeypress="validar2(event)"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -117,9 +119,10 @@
                 Considera solo el alfabeto A-Z en mayúsculas. Las palabras estarán separadas por comas, sin espacios.
             </p>
             <div class="problema-content">
-                <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma" id="p3-input">
-                <button type="button" class="problema-button" style="margin-top: 1rem;">Calcular palabras</button>
+                <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma" id="p3-input" onkeypress="validar3(event)">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema3()">Calcular palabras</button>
                 <pre class="problema-output" id="p3-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrar3()">Borrar</button>
             </div>
         </div>
     </div>
