@@ -18,31 +18,26 @@
             <div class="container-table">
                 <table class="table">
                     <tr>
-                        <td>Año de nacimiento:</td>
-                        <td><input type="text" name="anioNacimiento" id="anioNacimiento"
-                                onkeypress="return validarn(event)"></td>
-                    </tr>
-                    <tr>
-                        <td>Año actual:</td>
-                        <td><input type="text" name="anioActual" id="anioActual" onkeypress="return validarn(event)">
-                        </td>
+                        <td>Fecha de nacimiento:</td>
+                        <td><input type="date" name="fechaNacimiento" id="fechaNacimiento"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Calcular edad" name="enviar" onclick="calcularEdad()"></td>
+                        <td><input type="button" value="Calcular edad" onclick="calcularEdad()"></td>
                     </tr>
                     <tr>
                         <td>Edad actual:</td>
-                        <td><input type="text" name="edad" id="edad" readonly class="input_text"></td>
+                        <td><input type="text" id="edad" readonly class="input_text"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarEdad()"></td>
+                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrare()"></td>
                     </tr>
                 </table>
             </div>
         </form>
     </div>
+    <script src="./js/funciones1.js"></script>
     <footer>
         <a href="./index.html">
             <span class="material-symbols-outlined">arrow_back</span>

@@ -19,37 +19,33 @@
                 <table class="table">
                     <tr>
                         <td>Número de hombres:</td>
-                        <td><input type="text" name="numHombres" id="numHombres" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="numHombres" id="numHombres" onkeypress="return validarnP(event)"></td>
                     </tr>
                     <tr>
                         <td>Número de mujeres:</td>
-                        <td><input type="text" name="numMujeres" id="numMujeres" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="numMujeres" id="numMujeres" onkeypress="return validarnP(event)"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Calcular porcentajes" name="enviar"
-                                onclick="calcularPorcentajes()"></td>
+                        <td><input type="button" value="Calcular porcentajes" name="enviar" onclick="porcentaje()"></td>
                     </tr>
                     <tr>
                         <td>Porcentaje de hombres:</td>
-                        <td><input type="text" name="porcentajeHombres" id="porcentajeHombres" readonly
-                                class="input_text"></td>
+                        <td><input type="text" name="porcentajeHombres" id="porcentajeHombres" readonly class="input_text"></td>
                     </tr>
                     <tr>
                         <td>Porcentaje de mujeres:</td>
-                        <td><input type="text" name="porcentajeMujeres" id="porcentajeMujeres" readonly
-                                class="input_text"></td>
+                        <td><input type="text" name="porcentajeMujeres" id="porcentajeMujeres" readonly class="input_text"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarPorcentajes()"></td>
+                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarp()"></td>
                     </tr>
                 </table>
             </div>
         </form>
     </div>
+    <script src="./js/funciones1.js"></script>
     <footer>
         <a href="./index.html">
             <span class="material-symbols-outlined">arrow_back</span>

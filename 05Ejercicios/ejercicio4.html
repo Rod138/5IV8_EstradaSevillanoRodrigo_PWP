@@ -19,53 +19,45 @@
                 <table class="table">
                     <tr>
                         <td>Calificación del primer parcial:</td>
-                        <td><input type="text" name="parcial1" id="parcial1" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="parcial1" id="parcial1" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td>Calificación del segundo parcial:</td>
-                        <td><input type="text" name="parcial2" id="parcial2" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="parcial2" id="parcial2" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td>Calificación del tercer parcial:</td>
-                        <td><input type="text" name="parcial3" id="parcial3" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="parcial3" id="parcial3" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td>Calificación del examen final:</td>
-                        <td><input type="text" name="examenFinal" id="examenFinal" onkeypress="return validarn(event)">
-                        </td>
+                        <td><input type="text" name="examenFinal" id="examenFinal" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td>Calificación del trabajo final:</td>
-                        <td><input type="text" name="trabajoFinal" id="trabajoFinal"
-                                onkeypress="return validarn(event)"></td>
+                        <td><input type="text" name="trabajoFinal" id="trabajoFinal" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Calcular calificación" name="enviar"
-                                onclick="calcularCalificacion()"></td>
+                        <td><input type="button" value="Calcular calificación" name="enviar" onclick="cCalificacion()"></td>
                     </tr>
                     <tr>
                         <td>Promedio de parciales:</td>
-                        <td><input type="text" name="promedioParciales" id="promedioParciales" readonly
-                                class="input_text"></td>
+                        <td><input type="text" name="promedioParciales" id="promedioParciales" readonly class="input_text"></td>
                     </tr>
                     <tr>
                         <td>Calificación final:</td>
-                        <td><input type="text" name="calificacionFinal" id="calificacionFinal" readonly
-                                class="input_text"></td>
+                        <td><input type="text" name="calificacionFinal" id="calificacionFinal" readonly class="input_text"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarCalificacion()">
-                        </td>
+                        <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrarcalf()"></td>
                     </tr>
                 </table>
             </div>
         </form>
     </div>
+    <script src="./js/funciones1.js"></script>
     <footer>
         <a href="./index.html">
             <span class="material-symbols-outlined">arrow_back</span>
