@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="./js/ejercicios.js"></script>
+</head>
+
+<body>
+    <header><h1>Ejercicios parte dos</h1></header>
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">Ejercicio 1</h2>
+            <p>Crear un formulario en el cual se deben de leer 2 números, si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y sino que los sume. </p>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="e1-num1" placeholder="Ingrese el primer número">
+                <input type="number" class="problema-input" id="e1-num2" placeholder="Ingrese el segundo número">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="ejercicio1()">Calcular</button>
+                <pre class="problema-output" id="e1-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarE1()">Borrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">Ejercicio 2</h2>
+            <p>Leer tres números diferentes e imprimir el numero mayor de los 3.</p>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="e2-num1" placeholder="Ingrese el primer número">
+                <input type="number" class="problema-input" id="e2-num2" placeholder="Ingrese el segundo número">
+                <input type="number" class="problema-input" id="e2-num3" placeholder="Ingrese el tercer número">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="ejercicio2()">Calcular</button>
+                <pre class="problema-output" id="e2-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarE2()">Borrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">Ejercicio 3</h2>
+            <p>Determinar la cantidad de dinero que recibe un trabajador por concepto de horas extra trabajadas dentro de la empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extra, y que estas se pagan al doble de una hora normal, cuando no exceden de 8, si las hrs extra exceden de 8 se pagan las primeras 8 al doble y el resto al triple.</p>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="e3-horas" placeholder="Ingrese la cantidad de horas trabajadas">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="ejercicio3()">Calcular</button>
+                <pre class="problema-output" id="e3-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarE3()">Borrar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">Ejercicio 4</h2>
+            <p>
+                Calcular la utilidad de un trabajador que recibe le reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad de la empresa:
+                <br>
+                <b>Menos de un año:</b> 5%<br>
+                <b>De uno a dos años:</b> 7%<br>
+                <b>De dos a cinco años:</b> 10%<br>
+                <b>De cinco a diez años:</b> 15%<br>
+                <b>Más de diez años:</b> 20%
+            </p>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="e4-salario" placeholder="Ingrese el salario mensual">
+                <input type="number" class="problema-input" id="e4-antiguedad" placeholder="Ingrese la antigüedad en años">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="ejercicio4()">Calcular</button>
+                <pre class="problema-output" id="e4-output">Esperando datos...</pre>
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarE4()">Borrar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="../index.html">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <h2>Volver al index</h2>
+        </a>
+        <br>
+    </footer>
+</body>
+
+</html>
