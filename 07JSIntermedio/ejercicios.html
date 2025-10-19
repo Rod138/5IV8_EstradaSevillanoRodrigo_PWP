@@ -7,7 +7,7 @@
     <title>Ejercicios</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="./js/ejercicios.js"></script>
+    <script src="./js/funciones.js"></script>
 </head>
 
 <body>
@@ -44,8 +44,9 @@
     <div class="container">
         <div class="problema-container">
             <h2 class="problema-title">Ejercicio 3</h2>
-            <p>Determinar la cantidad de dinero que recibe un trabajador por concepto de horas extra trabajadas dentro de la empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extra, y que estas se pagan al doble de una hora normal, cuando no exceden de 8, si las hrs extra exceden de 8 se pagan las primeras 8 al doble y el resto al triple.</p>
+            <p>Determinar la cantidad de dinero que recibe un trabajador por concepto de horas extra trabajadas dentro de la empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran horas extra, y que estas se pagan al doble de una hora normal, cuando no exceden de 8, si las horas extra exceden de 8 se pagan las primeras 8 al doble y el resto al triple.</p>
             <div class="problema-content">
+                <input type="number" class="problema-input" id="e3-salario" placeholder="Ingrese el salario por hora">
                 <input type="number" class="problema-input" id="e3-horas" placeholder="Ingrese la cantidad de horas trabajadas">
                 <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="ejercicio3()">Calcular</button>
                 <pre class="problema-output" id="e3-output">Esperando datos...</pre>
@@ -58,7 +59,7 @@
         <div class="problema-container">
             <h2 class="problema-title">Ejercicio 4</h2>
             <p>
-                Calcular la utilidad de un trabajador que recibe le reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad de la empresa:
+                Calcular la utilidad de un trabajador que recibe el reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad de la empresa:
                 <br>
                 <b>Menos de un año:</b> 5%<br>
                 <b>De uno a dos años:</b> 7%<br>
