@@ -177,3 +177,12 @@ li::before {
     background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
     text-decoration: none;
 }
+
+.Pokemon{
+    font-family: Arial, sans-serif;
+    width: 940px;
+    margin: 2% auto;
+    min-height: 100%;
+    background-image: url(../images/pokemon.jpg);
+    box-sizing: border-box;
+}
