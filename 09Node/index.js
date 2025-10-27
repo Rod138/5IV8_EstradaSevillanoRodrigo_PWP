@@ -7,6 +7,7 @@ var servidor = http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8'});
     res.write("<h1>Hola mundo desde Node.js</h1>");
     res.write("<h1>A dormir</h1>");
+    res.write("<h1>A dormir X2</h1>");
     console.log("Hola, si entró al servidor");
     res.end();
 });
