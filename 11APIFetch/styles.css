@@ -109,7 +109,7 @@ header h1 {
     vertical-align: middle;
 }
 
-.column-elements {
+.columns-elements {
     display: flex;
     flex-direction: column;
 }
@@ -248,4 +248,9 @@ ul {
 
 #pokemonAbilities li::before {
     content: "⛏️ ";
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
 }
