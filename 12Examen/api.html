@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de personajes</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Buscador de personajes de cómics</h1>
+    </header><br><br>
+    <section class="main-container">
+        <section class="sheet-container">
+            <section class="third">
+                <div class="basic-info">
+                    <div class="search-container">
+                        <input type="text" placeholder="Ingrese el nombre del superhéroe">
+                        <button class="btn" id="search-btn">Buscar</button>
+                    </div>
+                    <h3>Información básica</h3>
+                    <label for="nameSelector"><b>Nombre:</b> </label><select id="nameSelector"></select><br>
+                    <p><b>Género: </b><span id="gender"></span></p>
+                    <label for="aliasesUl"><b>Alias:</b></label>
+                    <ul id="aliasesUl"></ul><br>
+                    <p><b>Primera aparición: </b><i><span id="first-appearance"></span></i></p>
+                    <p><b>Fecha de nacimiento: </b><i><span id="birth"></span></i></p>
+                </div>
+                <div class="advanced-info">
+                    <h3>Información avanzada</h3>
+                    <p><b>Origen: </b><span id="origin"></span></p>
+                    <label for="aliasesUl"><b>Poderes:</b></label>
+                    <ul id="powersUl"></ul><br>
+                    <p><b>Apariciones: </b><span id="appearances"></span></p>
+                </div>
+                <div class="description-container">
+                    <h3>Descripción</h3>
+                    <p id="description"></p>
+                </div>
+            </section>
+            <section class="third">
+                <div class="publisher-container">
+                    <h3>Editorial</h3><br>
+                    <img class="publisherimg" src="./img/interrogacion.png" alt="404"><br>
+                    <span id="publisher">Desconocido</span>
+                </div>
+                <div class="teams-container">
+                    <h3>Equipos:</h3><br>
+                    <ul id="teamsUl"></ul>
+                </div>
+                <div class="friends-container">
+                    <h3>Amigos:</h3><br>
+                    <ul id="friendsUl"></ul>
+                </div>
+                <div class="enemies-container">
+                    <h3>Enemigos:</h3><br>
+                    <ul id="enemiesUl"></ul>
+                </div>
+            </section>
+            <section class="third">
+                <div class="characterimg-container">
+                    <img class="characterimg" src="./img/404.png" alt="characterimg">
+                </div>
+            </section>
+        </section>
+    </section>
+    <script src="./js/fetch.js"></script>
+    <br><br>
+    <footer>
+        <a href="../index.html">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <h2>Volver al index</h2>
+        </a>
+        <br>
+    </footer>
+</body>
+
+</html>

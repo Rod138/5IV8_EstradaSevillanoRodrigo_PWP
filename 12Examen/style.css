@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #212121;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-color: #1976D2;
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #3993DD;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+footer a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: larger;
+}
+
+footer a:hover {
+    color: #212121;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    overflow-y: auto;
+    height: 90px;
+    border: #212121 2px solid;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: 600;
+}
+
+select,
+input,
+textarea {
+    border: 2px solid #212121;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    max-width: 250px;
+}
+
+.btn {
+    background-color: #1976D2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #1565C0;
+    transform: scale(1.05);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.sheet-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 90%;
+    padding: 1.5rem;
+    background-color: #F1D592;
+    border-radius: 15px;
+    gap: 1rem;
+    min-height: 700px;
+}
+
+.third {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.basic-info,
+.advanced-info,
+.description-container,
+.teams-container,
+.friends-container,
+.enemies-container {
+    flex: 1;
+    background-color: #F5F5F5;
+    border: 2px solid #212121;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.publisher-container {
+    flex: 1;
+    background-color: #F5F5F5;
+    border: 2px solid #212121;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.characterimg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    border: 2px solid #212121;
+    border-radius: 15px;
+    padding: 1rem;
+    height: 100%;
+    min-height: 700px;
+}
+
+.characterimg {
+    width: 350px;
+    height: auto;
+    border: 2px solid #212121;
+}
+
+.publisherimg {
+    width: 100px;
+    height: auto;
+}
+
+.basic-info span,
+.advanced-info span,
+.publisher-container span {
+    display: inline-block;
+    min-height: 20px;
+}
