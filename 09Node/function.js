@@ -8,3 +8,6 @@ var prueba = {
         console.log(c);
     }
 }
+console.log("Probando funciones");
+prueba.suma(5, 3);
+prueba.resta(5, 3);

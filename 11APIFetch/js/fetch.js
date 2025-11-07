@@ -49,7 +49,7 @@ const pokedex = () => {
 
     //La agregación de los elementos en este objeto debe ser una estructura que nos permita crear funciones mas pequeñas que sin importar el orden puedan obtener cada uno de los datos solicitados
     const processPokemonTypes = (pokemonData) => {
-        //Primero necesitamos obtener el tupo de pokemon, el nombre y la clase, para que se modifique en el html, ya que tenemos eso tendremos que obtener stats, moves, abilities
+        //Primero necesitamos obtener el tipo de pokemon, el nombre y la clase, para que se modifique en el html, ya que tenemos eso tendremos que obtener stats, moves, abilities
         let pokemonType = "";
         //Utilizo una búsqueda de la clase de pokemon, eso se refiere al tipo de pokemon
         const firstClass = pokemonData.types[0].type.name;

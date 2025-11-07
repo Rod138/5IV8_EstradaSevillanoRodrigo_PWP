@@ -1,5 +1,4 @@
 var http = require('http');
-
 //Vamos a crear nuestro propio servidor
 var servidor = http.createServer(function (req, res) {
     //Req -> request es una solicitud, viene por parte de la arquitectura cliente-servidor, todos los clientes (navegadores, usuarios, app, servicios, etc), son los que realizan una petición por parte del protocolo
@@ -11,7 +10,7 @@ var servidor = http.createServer(function (req, res) {
     console.log("Hola, si entró al servidor");
     res.end();
 });
-
 //Es necesario tener un puerto de comunicación para el servidor
 servidor.listen(3000);
 console.log("Servidor ejecutándose en http://localhost:3000");
+

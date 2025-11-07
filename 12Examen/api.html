@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-
 <body>
     <header>
         <h1>Buscador de personajes de cómics</h1>
@@ -17,12 +15,13 @@
         <section class="sheet-container">
             <section class="third">
                 <div class="basic-info">
+                    <h2>Ingrese el nombre del personaje</h2><br>
                     <div class="search-container">
-                        <input type="text" placeholder="Ingrese el nombre del superhéroe">
+                        <input type="text" id="nameInput" placeholder="Ejemplo: Peter Parker">
                         <button class="btn" id="search-btn">Buscar</button>
                     </div>
                     <h3>Información básica</h3>
-                    <label for="nameSelector"><b>Nombre:</b> </label><select id="nameSelector"></select><br>
+                    <p><b>Nombre: </b><span id="name"></span></p>
                     <p><b>Género: </b><span id="gender"></span></p>
                     <label for="aliasesUl"><b>Alias:</b></label>
                     <ul id="aliasesUl"></ul><br>
@@ -32,7 +31,7 @@
                 <div class="advanced-info">
                     <h3>Información avanzada</h3>
                     <p><b>Origen: </b><span id="origin"></span></p>
-                    <label for="aliasesUl"><b>Poderes:</b></label>
+                    <label for="powersUl"><b>Poderes:</b></label>
                     <ul id="powersUl"></ul><br>
                     <p><b>Apariciones: </b><span id="appearances"></span></p>
                 </div>
@@ -44,8 +43,8 @@
             <section class="third">
                 <div class="publisher-container">
                     <h3>Editorial</h3><br>
-                    <img class="publisherimg" src="./img/interrogacion.png" alt="404"><br>
-                    <span id="publisher">Desconocido</span>
+                    <img class="publisherimg" src="./img/interrogacion.png" alt="Publisherimg"><br>
+                    <span id="publisher">Desconocida</span>
                 </div>
                 <div class="teams-container">
                     <h3>Equipos:</h3><br>
@@ -62,7 +61,7 @@
             </section>
             <section class="third">
                 <div class="characterimg-container">
-                    <img class="characterimg" src="./img/404.png" alt="characterimg">
+                    <img class="characterimg" src="./img/404.png" alt="Characterimg">
                 </div>
             </section>
         </section>
@@ -77,5 +76,4 @@
         <br>
     </footer>
 </body>
-
 </html>

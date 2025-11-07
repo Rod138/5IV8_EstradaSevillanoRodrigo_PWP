@@ -159,7 +159,7 @@ textarea {
 .characterimg {
     width: 350px;
     height: auto;
-    border: 2px solid #212121;
+    border-radius: 50px;
 }
 
 .publisherimg {
