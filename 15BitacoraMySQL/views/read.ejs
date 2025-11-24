@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de mantenimiento</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Bitácora de mantenimiento</h1>
+    </header><br>
+    <h1>Detalles de la Bitácora</h1><br>
+    <p><strong>Dispositivo:</strong> <%= bitacora.dispositivo_nombre %></p>
+    <p><strong>Fecha Programada:</strong> <%= new Date(bitacora.fecha_programada).toISOString().split('T')[0] %></p>
+    <p><strong>Fecha Realizada:</strong> <%= bitacora.fecha_ejecucion ? new Date(bitacora.fecha_ejecucion).toISOString().split('T')[0] : 'Pendiente' %></p>
+    <p><strong>Tarea realizada</strong>: <%= bitacora.tarea_realizada || "No disponible" %></p>
+    <p><strong>Técnico Responsable:</strong> <%= bitacora.tecnico_responsable || "No asignado" %></p>
+    <p><strong>Horas de mantenimiento:</strong><%= bitacora.horas_equipo !== null ? bitacora.horas_equipo : "No disponible" %></p>
+    <p><strong>Estado del Mantenimiento:</strong><%= bitacora.estado_despues_servicio || "No disponible" %></p>
+    <br><br><br><br><br>
+    <a href="/">Volver al inicio</a>
+</body>
+
+</html>

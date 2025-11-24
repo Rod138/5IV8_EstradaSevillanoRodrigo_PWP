@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de mantenimiento</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Bitácora de mantenimiento</h1>
+    </header><br>
+    <h1>Crear registro</h1>
+    <form action="/bitacoras" method="post">
+        <label for="id_disp">Seleccione un dispositivo</label>
+        <select name="id_disp" id="id_disp">
+            <% dispositivos.forEach(function(dispositivo) { %>
+                <option value="<%= dispositivo.id %>">
+                    <%= dispositivo.nombre %>
+                </option>
+                <% }); %>
+        </select>
+        <label for="fecha_programada">Fecha programada</label>
+        <input type="datetime-local" id="fecha_programada" name="fecha_programada" required>
+        <label for="tarea_realizada">Tarea a realizar</label>
+        <input type="text" id="tarea_realizada" name="tarea_realizada" required>
+        <label for="tecnico_responsable">Técnico encargado</label>
+        <input type="text" id="tecnico_responsable" name="tecnico_responsable" required>
+        <button type="submit">Registrar Bitácora</button>
+    </form>
+
+    <ul>
+        <% bitacoras.forEach(bitacora=> { %>
+            <li>
+                Dispositivo: <strong>
+                    <%= bitacora.dispositivo_nombre %>
+                </strong> |
+                Fecha Programada: <%= new Date(bitacora.fecha_programada).toISOString().split('T')[0] %> |
+                    Fecha Realizada: <%= bitacora.fecha_ejecucion ? new
+                        Date(bitacora.fecha_ejecucion).toISOString().split('T')[0] : 'Pendiente' %> |
+                        <a href="/bitacoras/read/<%= bitacora.id %>">Ver</a>
+                        <a href="/bitacoras/edit/<%= bitacora.id %>">Editar</a>
+                        <a href="/bitacoras/delete/<%= bitacora.id %>">Eliminar</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+
+</html>

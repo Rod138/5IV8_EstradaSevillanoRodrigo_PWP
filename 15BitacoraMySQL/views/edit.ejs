@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de mantenimiento</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Bitácora de mantenimiento</h1>
+    </header><br>
+    <h1>Actualizar registro</h1>
+    <form action="/bitacoras/update/<%= bitacora.id %>" method="post">
+        <label for="id_disp">Seleccione un dispositivo</label>
+        <select name="id_disp" id="id_disp">
+            <% dispositivos.forEach(function(dispositivo) { %>
+                <option value="<%= dispositivo.id %>" <%= dispositivo.id === bitacora.id_disp ? 'selected' : '' %>>
+                    <%= dispositivo.nombre %>
+                </option>
+            <% }); %>
+        </select>
+        <label for="fecha_programada">Fecha programada</label>
+        <input type="datetime-local" id="fecha_programada" name="fecha_programada" value="<%= new Date(bitacora.fecha_programada).toISOString().slice(0,16) %>" required>
+        <label for="fecha_ejecucion">Fecha de ejecución</label>
+        <input type="datetime-local" id="fecha_ejecucion" name="fecha_ejecucion" value="<%= bitacora.fecha_ejecucion ? new Date(bitacora.fecha_ejecucion).toISOString().slice(0,16) : '' %>">
+        <label for="horas_equipo">Lectura del contador de horas de uso al momento del servicio</label>
+        <input type="number" id="horas_equipo" name="horas_equipo" value="<%= bitacora.horas_equipo %>" step="0.1">
+        <label for="tarea_realizada">Tarea a realizar</label>
+        <input type="text" id="tarea_realizada" name="tarea_realizada" value="<%= bitacora.tarea_realizada %>" required>
+        <label for="tecnico_responsable">Técnico encargado</label>
+        <input type="text" id="tecnico_responsable" name="tecnico_responsable" value="<%= bitacora.tecnico_responsable %>" required>
+        <label for="estado_despues_servicio">Estado después del servicio</label>
+        <select name="estado_despues_servicio" id="estado_despues_servicio">
+            <option value="Optimo" <%= bitacora.estado_despues_servicio === 'Optimo' ? 'selected' : '' %>>Óptimo</option>
+            <option value="Requiere seguimiento" <%= bitacora.estado_despues_servicio === 'Requiere seguimiento' ? 'selected' : '' %>>Requiere seguimiento</option>
+            <option value="Pendiente de pieza" <%= bitacora.estado_despues_servicio === 'Pendiente de pieza' ? 'selected' : '' %>>Pendiente de pieza</option>
+            <option value="" <%= !bitacora.estado_despues_servicio ? 'selected' : '' %>>No disponible</option>
+        </select>
+        <button type="submit">Actualizar Bitácora</button>
+    </form>
+    <a href="/">Volver al inicio</a>
+</body>
+
+</html>

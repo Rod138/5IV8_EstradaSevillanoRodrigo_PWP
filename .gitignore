@@ -1,4 +1,3 @@
 .vscode/
-.node_modules/
-14CRUDMYSQL/node_modules/
-14CRUDMYSQL/.env
+node_modules/
+.env
