@@ -115,6 +115,8 @@ app.get('/bitacoras/edit/:id', (req, res) => {
     const bitacoraId = req.params.id;
     const queryBitacora = `SELECT * FROM bitacora WHERE id = ${bitacoraId};`;
     const queryDispositivos = `SELECT id, nombre FROM equipos`;
+    //Validar que las fechas estén bien
+
     db.query(queryDispositivos, (errDis, dispositivos) => {
         if (errDis) {
             console.log("Error obteniendo dispositivos:", errDis);
@@ -136,6 +138,10 @@ app.post('/bitacoras/update/:id', (req, res) => {
     const fechaActual = new Date();
     const fechaProg = new Date(fecha_programada);
     const fechaEjec = new Date(fecha_ejecucion);
+    //Qur todos los campos estén llenos.
+    if (!id_disp || !fecha_programada || !fecha_ejecucion || !tarea_realizada || !tecnico_responsable || !horas_equipo || !estado_despues_servicio) {
+        return res.status(400).send('Todos los campos son obligatorios');
+    }
     if (fechaProg < fechaActual) {
         return res.status(400).send('La fecha programada no puede ser anterior a la fecha actual');
     }
@@ -148,6 +154,17 @@ app.post('/bitacoras/update/:id', (req, res) => {
     const horasParts = horas_equipo.toString().split('.');
     if (horasParts.length === 2 && horasParts[1].length > 2) {
         return res.status(400).send('Las horas de equipo no pueden tener más de dos decimales');
+    }
+    const negativeNumberPattern = /-\d+/;
+    if (negativeNumberPattern.test(id_disp) || negativeNumberPattern.test(horas_equipo)) {
+        return res.status(400).send('Los campos numéricos no pueden contener números negativos');
+    }
+    const textFields = [tarea_realizada, tecnico_responsable, estado_despues_servicio];
+    const textPattern = /^[\p{L}\p{N}\p{P}\p{Zs}]{10,50}$/u;
+    for (let field of textFields) {
+        if (!textPattern.test(field)) {
+            return res.status(400).send('Los campos de texto no pueden contener más de 100 caracteres ni emojis');
+        }
     }
 
     const query = `UPDATE bitacora SET id_disp=${id_disp}, fecha_programada='${fecha_programada}', fecha_ejecucion='${fecha_ejecucion}', tarea_realizada='${tarea_realizada}', tecnico_responsable='${tecnico_responsable}', horas_equipo=${horas_equipo}, estado_despues_servicio='${estado_despues_servicio}' WHERE id = ${bitacoraId};`;
@@ -168,6 +185,23 @@ app.post('/bitacoras', (req, res) => {
     const fechaProg = new Date(fecha_programada);
     if (fechaProg < fechaActual) {
         return res.status(400).send('La fecha programada no puede ser anterior a la fecha actual');
+    }
+    //Validar que llene todos los campos.
+    if (!id_disp || !fecha_programada || !tarea_realizada || !tecnico_responsable) {
+        return res.status(400).send('Todos los campos son obligatorios');
+    }
+    //Validar los campos de texto.
+    const textFields = [tarea_realizada, tecnico_responsable];
+    const textPattern = /^[\p{L}\p{N}\p{P}\p{Zs}]{10,50}$/u;
+    for (let field of textFields) {
+        if (!textPattern.test(field)) {
+            return res.status(400).send('Los campos de texto no pueden contener más de 100 caracteres ni emojis');
+        }
+    }
+    //Validar que no haya números negativos.
+    const negativeNumberPattern = /-\d+/;
+    if (negativeNumberPattern.test(id_disp)) {
+        return res.status(400).send('Los campos numéricos no pueden contener números negativos');
     }
 
     const query = `INSERT INTO bitacora (id_disp, fecha_programada, tarea_realizada, tecnico_responsable) VALUES (${id_disp}, '${fecha_programada}', '${tarea_realizada}', '${tecnico_responsable}');`;
