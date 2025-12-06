@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato de gatos</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Gato de gatos</h1>
+    </header>
+    <div class="superior_container">
+        <div class="rules">
+            <h3>Reglas</h3>
+            <ul id="lista_reglas"></ul>
+        </div>
+        <div class="scoreboard">
+            <h3>Score</h3>
+            <div id="players">
+                <label for="player_x">Jugador X:</label>
+                <input type="text" id="player_x" placeholder="Ingrese el nombre">
+                <br>
+                <label for="player_o">Jugador O:</label>
+                <input type="text" id="player_o" placeholder="Ingrese el nombre">
+            </div>
+            <button id="btn_nueva_sesion">Nueva Sesión</button>
+            <h3>Puntuación</h3>
+            <div id="scoreboard"></div>
+            <h3>Turno</h3>
+            <div id="turno"></div>
+        </div>
+        <div class="leaderboard">
+            <h3>Tabla de Posiciones</h3>
+            <div id="leaderboard-content">
+                <p>Cargando datos...</p>
+            </div>
+            <button id="btn_limpiar_historial">Limpiar Historial</button>
+        </div>
+    </div>
+    <div class="main_container">
+        <div id="tablero">
+            <div class="row">
+                <div class="celda" id="celda_0">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_00"></div>
+                            <div class="subcelda" id="subcelda_01"></div>
+                            <div class="subcelda" id="subcelda_02"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_03"></div>
+                            <div class="subcelda" id="subcelda_04"></div>
+                            <div class="subcelda" id="subcelda_05"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_06"></div>
+                            <div class="subcelda" id="subcelda_07"></div>
+                            <div class="subcelda" id="subcelda_08"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_1">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_10"></div>
+                            <div class="subcelda" id="subcelda_11"></div>
+                            <div class="subcelda" id="subcelda_12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_13"></div>
+                            <div class="subcelda" id="subcelda_14"></div>
+                            <div class="subcelda" id="subcelda_15"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_16"></div>
+                            <div class="subcelda" id="subcelda_17"></div>
+                            <div class="subcelda" id="subcelda_18"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_2">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_20"></div>
+                            <div class="subcelda" id="subcelda_21"></div>
+                            <div class="subcelda" id="subcelda_22"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_23"></div>
+                            <div class="subcelda" id="subcelda_24"></div>
+                            <div class="subcelda" id="subcelda_25"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_26"></div>
+                            <div class="subcelda" id="subcelda_27"></div>
+                            <div class="subcelda" id="subcelda_28"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="celda" id="celda_3">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_30"></div>
+                            <div class="subcelda" id="subcelda_31"></div>
+                            <div class="subcelda" id="subcelda_32"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_33"></div>
+                            <div class="subcelda" id="subcelda_34"></div>
+                            <div class="subcelda" id="subcelda_35"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_36"></div>
+                            <div class="subcelda" id="subcelda_37"></div>
+                            <div class="subcelda" id="subcelda_38"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_4">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_40"></div>
+                            <div class="subcelda" id="subcelda_41"></div>
+                            <div class="subcelda" id="subcelda_42"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_43"></div>
+                            <div class="subcelda" id="subcelda_44"></div>
+                            <div class="subcelda" id="subcelda_45"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_46"></div>
+                            <div class="subcelda" id="subcelda_47"></div>
+                            <div class="subcelda" id="subcelda_48"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_5">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_50"></div>
+                            <div class="subcelda" id="subcelda_51"></div>
+                            <div class="subcelda" id="subcelda_52"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_53"></div>
+                            <div class="subcelda" id="subcelda_54"></div>
+                            <div class="subcelda" id="subcelda_55"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_56"></div>
+                            <div class="subcelda" id="subcelda_57"></div>
+                            <div class="subcelda" id="subcelda_58"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="celda" id="celda_6">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_60"></div>
+                            <div class="subcelda" id="subcelda_61"></div>
+                            <div class="subcelda" id="subcelda_62"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_63"></div>
+                            <div class="subcelda" id="subcelda_64"></div>
+                            <div class="subcelda" id="subcelda_65"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_66"></div>
+                            <div class="subcelda" id="subcelda_67"></div>
+                            <div class="subcelda" id="subcelda_68"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_7">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_70"></div>
+                            <div class="subcelda" id="subcelda_71"></div>
+                            <div class="subcelda" id="subcelda_72"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_73"></div>
+                            <div class="subcelda" id="subcelda_74"></div>
+                            <div class="subcelda" id="subcelda_75"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_76"></div>
+                            <div class="subcelda" id="subcelda_77"></div>
+                            <div class="subcelda" id="subcelda_78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="celda" id="celda_8">
+                    <div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_80"></div>
+                            <div class="subcelda" id="subcelda_81"></div>
+                            <div class="subcelda" id="subcelda_82"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_83"></div>
+                            <div class="subcelda" id="subcelda_84"></div>
+                            <div class="subcelda" id="subcelda_85"></div>
+                        </div>
+                        <div class="row">
+                            <div class="subcelda" id="subcelda_86"></div>
+                            <div class="subcelda" id="subcelda_87"></div>
+                            <div class="subcelda" id="subcelda_88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="btn_reiniciar">Reiniciar juego</button>
+    </div>
+    <footer>
+        <a href="../index.html">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <h2>Volver al index</h2>
+        </a>
+        <br>
+    </footer>
+    <script src="./firebase-config.js"></script>
+    <script src="./functions.js"></script>
+</body>
+
+</html>
